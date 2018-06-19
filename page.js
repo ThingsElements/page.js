@@ -811,6 +811,14 @@ pathToRegexp_1.tokensToRegExp = tokensToRegExp_1;
   };
 
   /**
+   * Cancel exit
+   */
+  page.cancelExit = function(ctx){
+    prevContext = ctx;
+    ctx.pushState();
+  };
+
+  /**
    * Remove URL encoding from the given `str`.
    * Accommodates whitespace in both x-www-form-urlencoded
    * and regular percent-encoded form.
